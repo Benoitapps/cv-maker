@@ -44,7 +44,7 @@ jobs:
               run : pnpm run build
 
             - name: test the connexion
-              run:
+              run: |
                 pnpm run preview &
                 sleep 5
                 curl -I http://localhost:4173
