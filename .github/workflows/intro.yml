@@ -112,7 +112,7 @@ jobs:
 
         - name: git config
           run: |
-            git config --global user.email "${GITHUB_ACTOR}"
+            git config --global user.name "${GITHUB_ACTOR}"
             git config --global user.email "${GITHUB_ACTOR}@user.noreply.github.com"
 
         - name: push to git
