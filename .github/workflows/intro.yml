@@ -103,9 +103,5 @@ jobs:
             - name: Deploy Project Artifacts to Vercel
               run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
 
-            - name: Run Command After Deployment
-              run: |
-               echo "docker run -i --init --cap-add=SYS_ADMIN --network host -v ./gen:/home/pptruser/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" http://localhost:4173 ./gen"
-        
-
+          
 
