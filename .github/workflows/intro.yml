@@ -59,6 +59,10 @@ jobs:
               run: |
                 echo "docker run -i --init --cap-add=SYS_ADMIN --network host -v ./gen:/home/pptruser/gen ghcr.io/puppeteer/puppeteer:latest node -e "$(cat snapshot.js)" http://localhost:4173 ./gen"
       
+            - name: move dossier
+              run: |
+                echo "mv ./gen ./static"
+    
 
 
     deploy:
